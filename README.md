@@ -48,7 +48,7 @@ After thatyou can type < python app.py> to run the API package as shown in the f
 That starts the Api server on the local host 127.0.0.1:5000
 
 ### Testing with Postman
-Open the Postman application and set to 127.0.0.1:5000 setting at GET. 127.0.0.1:5000/ and 127.0.0.1:5000/home will display the same as shown below: ![Postman display](images\post1.png)
+Open the Postman application and set to 127.0.0.1:5000 setting at GET. 127.0.0.1:5000/ and 127.0.0.1:5000/home will display the same as shown below: ![Postman display](relative%20images\post1.png)
 
 A care look into the Postman displayed above, we discover that one of the request body params filePath is set to "D:/Desktop/Pictures" and that is what is required in running the url < 127.0.0.1:5000/view_directory_content>
 which is the url required to display the files in the given folder.
@@ -74,5 +74,5 @@ To access the databde document.db follow the sqlte commands as listed below:
 * select * from Pictures; to display the table 
 
 The figure below shows the displayed figure after issuing the commands as stiuplated.
-![SQLITE command line](images\post6.png)
+![SQLITE command line](.\images\post6.png)
 ## A look into the different files that comprises the API Package
