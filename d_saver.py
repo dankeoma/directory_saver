@@ -18,7 +18,9 @@ def sqlite_save(directory):
     
     
     try:
-        if os.path.realpath('document.db'):
+        from pathlib import Path
+        file_path = Path("document.db")
+        if file_path.exists():
             os.remove('document.db')
          
         #Create a databse and establish a connection
@@ -51,12 +53,14 @@ def sqlite_save(directory):
         sql = 'select * from {} '.format(dr_name)
         my_cursor.execute(sql)
         dat = my_cursor.fetchall()
-        print(dat)
-    except Exception:
-        print ("Database already exists!!!")
+        # print(dat)
+        return dat
+    except Exception as e :
+        # print ("Database already exists!!!")
+        print(e)
         
-    
-sqlite_save("C:/Users/hp/Pictures")
+# p =     "D:/Desktop/St.Peters/Monthly/october"
+# sqlite_save(p)
 
 
 
